@@ -226,7 +226,7 @@ func (c *Client) subSpin() {
 
 	emptyMasterCount := 0
 	for {
-		time.Sleep(0.5 * time.Second)
+		time.Sleep(500 * time.Millisecond)
 		master := c.masterFromFailover()
 		if len(master) == 0 {
 			emptyMasterCount++
